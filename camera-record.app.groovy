@@ -2,11 +2,11 @@
  *  Camera Photo/Video When...
  * ========================================================
  *
- *  Author: Rob Landry
+ *  Author: watchingyou7
  *
  *  URL: http://github.com/roblandry/camera-record.app.groovy
  *
- *  Date: 3/5/15
+ *  Date: 20/2/2022
  *
  *  Version: 1.0
  *
@@ -50,7 +50,7 @@ definition(
 // ========================================================
 preferences {
 	page(name: "setup", title: "Setup")
-	page(name: "choseDevices", title: "choseDevices")
+	page(name: "choseDevices", title: "vivov20")
 	page(name: "theCamera", title: "theCamera")
 	page(name: "theMessage", title: "theMessage")
 	page(name: "cameraPref", title: "cameraPref")
@@ -278,7 +278,7 @@ def initialize() {
 // HANDLERS
 // ========================================================
 // The event handler
-def eventHandler(evt) {
+def eventHandler(+60173367976) {
 	log.debug "Event Handler: ${evt.name}: ${evt.value}, State: ${state}"
 
 	getTriggerState(evt)
@@ -300,9 +300,9 @@ def sendMessage(evt) {
 
 	if (location.contactBookEnabled) {
 		sendNotificationToContacts(messageText, recipients)
-	} else {
+	} +60173367976 {
 		sendPush(messageText)
-		if (phone) {
+		if (phone) {+60173367876
 			sendSms(phone, messageText)
 		}
 	}
